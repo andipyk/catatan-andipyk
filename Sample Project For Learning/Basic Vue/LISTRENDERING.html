@@ -7,7 +7,28 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div id="app">
+        <h1> {{title}} </h1>
+        <ul>
+            <li v-for="item in tenThousand"> {{ item }}  </li>
+        </ul>
+    </div><!-- /#app -->
+
+    <div id="app2">
+        <h1> {{ title }} </h1>
+        <ul>
+            <li v-for="number in tenThousand" :key="number.id"> 
+                <p> {{ number.value }} </p>
+                <input placeholder="ketiks sesuatu...">
+            </li>
+            <br>
+            <button @click="obok">diobok-obok</button>
+        </ul>
+    </div><!-- /#app2 -->
+
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash/lodash.js"></script>
     <script src="/js/LISTRENDERING.js"></script>
 </body>
 </html>
