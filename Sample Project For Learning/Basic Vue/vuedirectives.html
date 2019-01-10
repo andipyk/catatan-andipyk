@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Directive</title>
+</head>
+<body>
+
+    <div id="app">
+            <h2>{{ greeting }}</h2>
+            <p>{{alertMessage}}</p>
+            <p>Surge.com -> live static server</p>
+            <button v-on:click="changeGreeting">
+              Change Greeting
+            </button> 
+            <button v-on:dblclick="changeGreeting">
+              Double click to change greeting
+            </button>
+            <input v-on:keyup="alertMessageGreeting"
+                   placeholder="Type something" />
+            <input v-on:keyup.enter="alertEnterGreeting" 
+                   placeholder="Type and release Enter" />
+    </div><!-- /#app -->
+
+    <div id="app2">
+        <h1>{{ title }} </h1>
+        <img v-bind:src="cityImage">
+    </div><!-- /#app2 -->
+
+    <div id="app3">
+        <h1> {{ title }} </h1>
+        <p>My name is {{ name }} </p>
+        <p v-if="city === 'Jakarta'"> I am lived in {{ city }} </p>
+        <p v-if="city === 'Payakumbuh'">My village in {{ city }} </p>
+        <button v-on:click="changeCity" >change city</button>
+    </div><!-- /#app3 -->
+
+    <div id="app4">
+        <h1> {{ title }} </h1>
+        <p>:src= & @click=</p>
+    </div><!-- /#app4 -->
+
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="/js/vuedirective.js"></script>
+</body>
+</html>
