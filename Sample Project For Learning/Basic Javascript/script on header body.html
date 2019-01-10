@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script>
+    function myFuncton(){
+        document.getElementById('change').innerHTML = 'Aku tak akan berubah'
+    }
+    </script>
+</head>
+<body>
+    <h1 id="change">Apakah aku berubah??</h1>
+    <button onclick="myFuncton()">Coba klik dulu</button>
+    <button onclick="berubah()">Coba jawab jujur</button>
+
+    <script>
+    function berubah(){
+        document.getElementById('change').innerHTML = 'Aku Sebenarnya Bukan Aku yang dulu'
+    }</script>
+</body>
+</html>

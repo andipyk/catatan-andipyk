@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{message}} 
+    </div><!-- /#app -->
+
+    <div id="app2">
+        <span v-bind:title="message">
+                Hover your mouse over me for a few seconds to see my dynamically bound title!
+        </span>
+    </div>
+
+    <div id="if">
+        <span v-if="seen">
+            Now you show me :D
+        </span>
+    </div>
+
+    <div id="app4">
+        <ol>
+            <li v-for="todo in todos">
+                {{todo.teks}}
+            </li>
+        </ol>
+    </div><!-- /#app4 -->
+
+    <div id="handlingInput">
+        <p>{{ message }}</p>
+        <button v-on:click="balikKata">Balik Kata</button>
+    </div><!-- /#handlingInput -->
+
+    <div id="placeholder">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div><!-- /#placeholder -->
+
+    <div id="component1">
+        <ol>
+            <todo-item></todo-item>
+        </ol>
+    </div><!-- /#component1 -->
+
+    <div id="componentProps">
+        <ol>
+            <component-item
+                v-for="item in petshop"
+                v-bind:component="item"
+                v-bind:key="item.id"
+            ></component-item>
+        </ol>
+    </div><!-- /#componentProps -->
+
+    <div id="cobaPropsLagi">
+        <ol>
+            <motor-item
+                v-for="item in motors"
+                v-bind:motor="item"
+                v-bind:key="item.id"></motor-item>
+        </ol>
+    </div><!-- /#cobaPropsLagi -->
+
+    <script src="learning.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div><br>
+    <div id="demo2"></div><br><br>
+
+    <script>
+        var x,y,z
+
+        x = 5
+        y = 10
+        z = x*y
+
+        document.getElementById('demo').innerHTML = x+' x '+y+' = '+z
+        
+        x += 10
+        a = x;
+        
+        x -= 10
+        b = x
+
+        x *= 10
+        c = x
+
+        x /= 10
+        d = x
+
+        x %= 5
+        e = x
+
+
+        document.getElementById('demo2').innerHTML = 
+                'a = '+a+ '<br>// x += '
+                +'<br><br>b = '+b+ '<br>// x -= '
+                +'<br><br>c = '+c+ '<br>// x *= '
+                +'<br><br>d = '+d+ '<br>// x /= '
+                +'<br><br>e = '+e+ '<br>// x %= '
+
+        document.getElementById('demo2').style = 'color:green'
+
+        var kabar = "senang"
+        kabar += " dan tidak sedih"
+
+        document.write(kabar)
+
+    </script>
+</body>
+</html>
