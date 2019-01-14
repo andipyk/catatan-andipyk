@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue components - global components</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma/css/bulma.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <style>
+        html,body {
+            height: 100%;
+            padding-top: 10px;
+            background: #e6ecf1;
+        }
+        #app {
+            height: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #app .button {
+            margin-bottom: 20px;
+        }
+        #app .tweet{
+            width: 500px;
+            margin: 0 auto;
+            padding-bottom: 15px;
+        }
+        #app .box{
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+        #app .content small {
+            color: #00d1b2;
+        }
+
+        #app img {
+            border-radius: 30px;
+        }
+        #app .level-item {
+            padding-left: 10px;
+            justify-content: flex-start;
+            display: inline;
+            color: #00d1b2;
+        }
+        #app input:focus {
+            border-color: #00d1b2;
+        }
+        #app .likes {
+            padding: 0 7.5px;
+        }
+        #app input {
+            font-weight: bold;
+        }
+        #app .tweets-move {
+            transition: transform 1s;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <tweet-component v-for="tweet in tweets" :key="tweet.id" :tweet="tweet"></tweet-component>
+    </div><!-- /#app -->
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="../js/11-vue components-global components.js"></script>
+</body>
+</html>
