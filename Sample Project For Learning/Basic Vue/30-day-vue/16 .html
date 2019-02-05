@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/bulma/css/bulma.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+</head>
+<body>
+    <div id="app">
+
+
+    </div><!-- /#app -->
+
+    <div id="template-strings">
+        <single-linetemplate :message="message" ></single-linetemplate>
+        <multi-linetemplate :balas="balas"></multi-linetemplate>
+        <x-temp :message="message"></x-temp>
+
+        <script type="text/x-template" id="x-template-component">
+            <div class="card">
+                <header class="card-header card-header-title">
+                    {{ message }}
+                </header>
+            </div>
+        </script>
+    </div><!-- /#template-strings -->
+
+
+
+    
+    <script src="https://unpkg.com/vue"></script>
+    <script src="../js/16.js"></script>
+
+</body>
+</html>
