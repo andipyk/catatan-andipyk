@@ -1,1 +1,1 @@
-![assets/tes.gif](assets\tes.gif)
+![demo-css-js-clock](assets/tes.gif)
