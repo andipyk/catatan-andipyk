@@ -1,3 +1,3 @@
 # Demo 
 
-![tes](assets\tes.gif)
+![tes](assets/tes.gif)
